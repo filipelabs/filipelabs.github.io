@@ -34,6 +34,7 @@ section {
 
 #about {
     background-image: url("assets/capa.webp");
+    background-repeat: no-repeat;
     padding: 50px 20px;
 }
 
