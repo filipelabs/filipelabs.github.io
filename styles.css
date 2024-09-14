@@ -40,14 +40,14 @@ section {
 /* Estilo padrão dos links */
 a {
     color: #1a1a1a; /* Cor azul mais vibrante */
-    text-decoration: none; /* Remove o sublinhado padrão */
+    text-: none; /* Remove o sublinhado padrão */
     transition: color 0.3s ease; /* Transição suave ao mudar de cor */
 }
 
 /* Cor dos links ao passar o mouse (hover) */
 a:hover {
     color: #1a1a1a; /* Cor diferente ao passar o mouse */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Cor dos links já visitados */
