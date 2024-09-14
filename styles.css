@@ -95,6 +95,33 @@ section {
     background-color: #0056b3;
 }
 
+#contato {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #007bff; /* Cor padrão dos ícones */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0056b3; /* Cor ao passar o mouse sobre o ícone */
+}
+
+
 #back-to-top {
     display: none; /* Escondido inicialmente */
     position: fixed;
