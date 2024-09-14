@@ -39,20 +39,20 @@ section {
 
 /* Estilo padrão dos links */
 a {
-    color: #1a73e8; /* Cor azul mais vibrante */
+    color: #1a1a1a; /* Cor azul mais vibrante */
     text-decoration: none; /* Remove o sublinhado padrão */
     transition: color 0.3s ease; /* Transição suave ao mudar de cor */
 }
 
 /* Cor dos links ao passar o mouse (hover) */
 a:hover {
-    color: #ff6f61; /* Cor diferente ao passar o mouse */
+    color: #1a1a1a; /* Cor diferente ao passar o mouse */
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Cor dos links já visitados */
 a:visited {
-    color: #551a8b; /* Cor roxa para links visitados */
+    color: #1a1a1a; /* Cor roxa para links visitados */
 }
 
 /* Cor dos links ao serem clicados (active) */
