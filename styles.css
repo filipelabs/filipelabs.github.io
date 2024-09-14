@@ -89,12 +89,6 @@ a:active {
 }
 
 .project-description {
-    position: absolute;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     opacity: 0; /* Invisível por padrão */
     transition: opacity 0.3s ease; /* Transição suave */
 }
