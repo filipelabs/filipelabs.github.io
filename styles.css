@@ -36,6 +36,12 @@ section {
     background-color: #fff;
     padding: 50px 20px;
 }
+
+#projects {
+    background-color: #eaeaea;
+    padding: 50px 20px;
+}
+
 /* Container de Projetos */
 .projects-container {
     display: flex;
@@ -65,20 +71,6 @@ section {
         flex-direction: column;
         align-items: center;
     }
-}
-
-
-#projects {
-    background-color: #eaeaea;
-    padding: 50px 20px;
-}
-
-.project-card {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 300px;
 }
 
 .back-button {
