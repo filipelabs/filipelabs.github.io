@@ -105,7 +105,7 @@ a:active {
     transition: opacity 0.3s ease; /* Transição suave */
 }
 
-.project-container:hover .project-description {
+.project-description:hover {
     opacity: 1; /* Torna visível ao passar o mouse */
 }
 
