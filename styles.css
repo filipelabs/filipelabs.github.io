@@ -50,11 +50,6 @@ a:hover {
     text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Cor dos links já visitados */
-a:visited {
-    color: #1a1a1a; /* Cor roxa para links visitados */
-}
-
 /* Cor dos links ao serem clicados (active) */
 a:active {
     color: #1a1a1a; /* Cor vermelha ao clicar no link */
