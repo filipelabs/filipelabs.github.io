@@ -36,6 +36,37 @@ section {
     background-color: #fff;
     padding: 50px 20px;
 }
+/* Container de Projetos */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os projetos */
+    padding: 20px;
+}
+
+/* Cartão de Projeto */
+.project-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px; /* Largura fixa para os cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Efeito hover para aumentar o cartão */
+}
+
+@media (max-width: 768px) {
+    /* Em telas menores, os projetos ficam em coluna */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 #projects {
     background-color: #eaeaea;
