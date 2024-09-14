@@ -88,6 +88,27 @@ a:active {
     transform: scale(1.05); /* Efeito hover para aumentar o cartão */
 }
 
+.project-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para destaque */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0; /* Invisível por padrão */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+.project-container:hover .project-description {
+    opacity: 1; /* Torna visível ao passar o mouse */
+}
+
 @media (max-width: 768px) {
     /* Em telas menores, os projetos ficam em coluna */
     .projects-container {
