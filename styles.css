@@ -35,10 +35,31 @@ section {
 #about {
    background-image: url("assets/capa.webp");
     background-repeat: no-repeat;
-    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-size: cover; /* Cobre o contêiner sem distorcer */
     background-position: center; /* Centraliza a imagem */
-    padding: 50px 20px; /* Adiciona um espaçamento interno */
-    height: 100vh; /* Preenche 100% da altura da janela de visualização */
+    padding: 50px 20px;
+    min-height: 60vh; /* Define uma altura mínima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    #about {
+        background-size: cover; /* Continua a cobrir o contêiner */
+        padding: 40px 15px;
+        min-height: 50vh; /* Altura mínima um pouco menor */
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        background-size: cover; /* Continua a cobrir o contêiner */
+        padding: 30px 10px;
+        min-height: 40vh; /* Altura mínima ainda menor para dispositivos pequenos */
+    }
 }
 
 /* Estilo padrão dos links */
@@ -106,21 +127,6 @@ a:active {
     .projects-container {
         flex-direction: column;
         align-items: center;
-    }
-    
-    #about {
-        background-size: contain; /* Ajusta a imagem sem cortar */
-        height: auto; /* Deixa o contêiner crescer conforme o conteúdo */
-        padding: 40px 15px; /* Diminui o padding para telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    #about {
-        background-size: contain; /* Garante que a imagem caiba na tela */
-        background-position: center; /* Centraliza a imagem */
-        height: auto; /* O contêiner se ajusta conforme o conteúdo */
-        padding: 30px 10px; /* Padding menor para dispositivos móveis */
     }
 }
 
