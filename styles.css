@@ -33,8 +33,12 @@ section {
 }
 
 #about {
-    background-image: url("assets/capa.webp");
+   background-image: url("assets/capa.webp");
     background-repeat: no-repeat;
+    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    padding: 50px 20px; /* Adiciona um espaçamento interno */
+    height: 100vh; /* Preenche 100% da altura da janela de visualização */
 }
 
 /* Estilo padrão dos links */
