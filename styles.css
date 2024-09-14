@@ -107,6 +107,21 @@ a:active {
         flex-direction: column;
         align-items: center;
     }
+    
+    #about {
+        background-size: contain; /* Ajusta a imagem sem cortar */
+        height: auto; /* Deixa o contêiner crescer conforme o conteúdo */
+        padding: 40px 15px; /* Diminui o padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        background-size: contain; /* Garante que a imagem caiba na tela */
+        background-position: center; /* Centraliza a imagem */
+        height: auto; /* O contêiner se ajusta conforme o conteúdo */
+        padding: 30px 10px; /* Padding menor para dispositivos móveis */
+    }
 }
 
 .back-button {
