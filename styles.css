@@ -86,6 +86,12 @@ a:active {
     padding: 50px 20px;
 }
 
+.project-card img {
+    width: 300px; /* Largura total do contêiner */
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Cobre o contêiner sem distorcer */
+}
+
 /* Container de Projetos */
 .projects-container {
     display: flex;
