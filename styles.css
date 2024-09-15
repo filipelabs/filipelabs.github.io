@@ -38,7 +38,7 @@ section {
     background-size: cover; /* Cobre o contêiner sem distorcer */
     background-position: center; /* Centraliza a imagem */
     padding: 50px 20px;
-    display: flex;
+    display: block;
 }
 
 /* Ajuste para telas menores */
