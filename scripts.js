@@ -65,3 +65,25 @@ carouselImgs.forEach(img => {
 closeBtn.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
+
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+    let startY;
+    let description = card.querySelector('.project-description');
+
+    card.addEventListener('touchstart', (event) => {
+        startY = event.touches[0].clientY;
+    });
+
+    card.addEventListener('touchmove', (event) => {
+        const currentY = event.touches[0].clientY;
+        const difference = currentY - startY;
+
+        if (difference > 50) { // Ajuste o valor 50 conforme necessário
+            description.style.opacity = 1;
+        } else {
+            description.style.opacity = 0;
+        }
+    });
+});
