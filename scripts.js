@@ -20,35 +20,39 @@ backToTopButton.addEventListener("click", function() {
     document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
 });
 
-// Carrossel de imagens
+// Seleciona os elementos
 const carousel = document.querySelector('.carousel');
 const carouselImgs = carousel.querySelectorAll('.carousel-img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
 let currentImgIndex = 0;
 
-// Inicialize o carrossel com a primeira imagem ativa
+// Inicializa o carrossel com a primeira imagem ativa
 carouselImgs[currentImgIndex].classList.add('active');
 
-// Adicione um event listener para o botão "prev"
-document.querySelector('.prev').addEventListener('click', function() {
-  carouselImgs[currentImgIndex].classList.remove('active');
+// Função para mostrar a imagem ativa
+function showImage(index) {
+  carouselImgs.forEach(img => img.classList.remove('active'));
+  carouselImgs[index].classList.add('active');
+}
+
+// Event listener para o botão "prev"
+prevBtn.addEventListener('click', () => {
   currentImgIndex = (currentImgIndex - 1 + carouselImgs.length) % carouselImgs.length;
-  carouselImgs[currentImgIndex].classList.add('active');
+  showImage(currentImgIndex);
 });
 
-// Adicione um event listener para o botão "next"
-const nextBtn = document.querySelector('.next');
-nextBtn.addEventListener('click', function() {
-  carouselImgs[currentImgIndex].classList.remove('active');
+// Event listener para o botão "next"
+nextBtn.addEventListener('click', () => => {
   currentImgIndex = (currentImgIndex + 1) % carouselImgs.length;
-  carouselImgs[currentImgIndex].classList.add('active');
+  showImage(currentImgIndex);
 });
 
-// Adicione um event listener para a tecla direita
+// Event listener para a tecla direita
 document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowRight') {
-    carouselImgs[currentImgIndex].classList.remove('active');
-    currentImgIndex = (currentImgIndex + 1) % carouselImgs.length;
-    carouselImgs[currentImgIndex].classList.add('active');
+    nextBtn.click(); // Simula um clique no botão "next"
   }
 });
 
