@@ -206,6 +206,10 @@ a:active {
     width: 100%;
 }
 
+.carousel-img.active {
+  display: block;
+}
+
 .carousel-img:first-child {
     display: block; /* A primeira imagem do carrossel é exibida inicialmente */
 }
