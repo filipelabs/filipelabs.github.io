@@ -38,7 +38,6 @@ section {
     background-size: cover; /* Cobre o contêiner sem distorcer */
     background-position: center; /* Centraliza a imagem */
     padding: 50px 20px;
-    min-height: 60vh; /* Define uma altura mínima */
     display: flex;
 }
 
@@ -47,7 +46,7 @@ section {
     #about {
         background-size: cover; /* Continua a cobrir o contêiner */
         padding: 40px 15px;
-        min-height: 50vh; /* Altura mínima um pouco menor */
+        min-height: 15vh; /* Altura mínima um pouco menor */
     }
 }
 
@@ -55,7 +54,7 @@ section {
     #about {
         background-size: cover; /* Continua a cobrir o contêiner */
         padding: 30px 10px;
-        min-height: 40vh; /* Altura mínima ainda menor para dispositivos pequenos */
+        min-height: 15vh; /* Altura mínima ainda menor para dispositivos pequenos */
     }
 }
 
