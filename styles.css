@@ -269,6 +269,7 @@ button.next {
         padding: 30px 10px;
         min-height: 15vh; /* Altura mínima ainda menor para dispositivos pequenos */
     }
+}
 
 footer {
     background-color: #333;
