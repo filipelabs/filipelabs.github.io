@@ -26,16 +26,28 @@ const images = document.querySelectorAll('.carousel-img');
 const totalImages = images.length;
 
 document.querySelector('.next').addEventListener('click', function() {
-  images[currentIndex].classList.remove('active');
+  const currentImage = document.querySelector('.carousel-img.active');
+  currentImage.classList.remove('active');
   currentIndex = (currentIndex + 1) % totalImages;
   images[currentIndex].classList.add('active');
 });
 
 document.querySelector('.prev').addEventListener('click', function() {
-  images[currentIndex].classList.remove('active');
+  const currentImage = document.querySelector('.carousel-img.active');
+  currentImage.classList.remove('active');
   currentIndex = (currentIndex - 1 + totalImages) % totalImages;
   images[currentIndex].classList.add('active');
 });
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopButton.style.display = "block";
+    document.querySelector('.carousel-img.active').classList.remove('active');
+  } else {
+    backToTopButton.style.display = "none";
+    document.querySelector('.carousel-img:first-child').classList.add('active');
+  }
+}
 
 // Lightbox para exibir a imagem em tamanho maior
 const lightbox = document.getElementById('lightbox');
