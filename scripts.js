@@ -25,42 +25,38 @@ const carousel = document.querySelector('.carousel');
 const carouselImgs = carousel.querySelectorAll('.carousel-img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
 
 let currentImgIndex = 0;
 
-// Inicializa o carrossel com a primeira imagem ativa
-carouselImgs[currentImgIndex].classList.add('active');
-
-// Função para mostrar a imagem ativa
+// Função para mostrar a imagem ativa com transição
 function showImage(index) {
   carouselImgs.forEach(img => img.classList.remove('active'));
   carouselImgs[index].classList.add('active');
 }
 
-// Event listener para o botão "prev"
+// Event listeners para os botões
 prevBtn.addEventListener('click', () => {
   currentImgIndex = (currentImgIndex - 1 + carouselImgs.length) % carouselImgs.length;
   showImage(currentImgIndex);
 });
 
-// Event listener para o botão "next"
-nextBtn.addEventListener('click', () => => {
+nextBtn.addEventListener('click', () => {
   currentImgIndex = (currentImgIndex + 1) % carouselImgs.length;
   showImage(currentImgIndex);
 });
 
-// Event listener para a tecla direita
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowRight') {
-    nextBtn.click(); // Simula um clique no botão "next"
-  }
+// Event listener para abrir o lightbox
+carouselImgs.forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
 });
 
-// Lightbox para exibir a imagem em tamanho maior
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const imagesInCarousel = document.querySelectorAll('.carousel-img');
-
-imagesInCarousel.forEach(img => {
-    img.addEventListener('click', function() {
-        lightbox.style.display = 'flex';
+// Event listener para fechar o lightbox
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
