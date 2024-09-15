@@ -216,6 +216,10 @@ a:active {
   display: block;
 }
 
+.carousel-img.inactive {
+  display: none;
+}
+
 .carousel-img:first-child {
     display: block; /* A primeira imagem do carrossel é exibida inicialmente */
 }
