@@ -23,6 +23,7 @@ backToTopButton.addEventListener("click", function() {
 // Carrossel de imagens
 let currentIndex = 0;
 const images = document.querySelectorAll('.carousel-img');
+images[0].classList.add('active'); // Adiciona a classe active à primeira imagem
 const totalImages = images.length;
 
 document.querySelector('.next').addEventListener('click', function() {
@@ -38,16 +39,6 @@ document.querySelector('.prev').addEventListener('click', function() {
   currentIndex = (currentIndex - 1 + totalImages) % totalImages;
   images[currentIndex].classList.add('active');
 });
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopButton.style.display = "block";
-    document.querySelector('.carousel-img.active').classList.remove('active');
-  } else {
-    backToTopButton.style.display = "none";
-    document.querySelector('.carousel-img:first-child').classList.add('active');
-  }
-}
 
 // Lightbox para exibir a imagem em tamanho maior
 const lightbox = document.getElementById('lightbox');
