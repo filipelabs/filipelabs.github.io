@@ -92,8 +92,8 @@ a:active {
 }
 
 .project-card img {
-    width: 300px; /* Largura total do contêiner */
-    max-height: 350px; /* Altura fixa para as imagens */
+    width: 100%; /* Largura total do contêiner */
+    max-height: 100%; /* Altura fixa para as imagens */
     object-fit: cover; /* Cobre o contêiner sem distorcer */
 }
 
@@ -114,6 +114,8 @@ a:active {
     width: 300px; /* Largura fixa para os cartões */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s box-shadow 0.3s ease; /* adicione essa linha */;
+    position: relative; /* Para posicionar a descrição sobre a imagem */
+
 }
 
 .project-card:hover {
@@ -123,16 +125,19 @@ a:active {
 }
 
 .project-description {
-    opacity: 0; /* Invisível por padrão */
-    transition: opacity 0.3s ease;
-    color: #fff; /* cor branca para o texto */
-    background-color: rgba(0, 0, 0, 0.5); /* cor de fundo preta com 50% de opacidade */
-    padding: 10px; /* adicione um pouco de padding para que o texto fique mais legível */
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.project-description:hover {
-    opacity: 0.8; /* Torna visível ao passar o mouse */
+.project-card:hover .project-description {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
