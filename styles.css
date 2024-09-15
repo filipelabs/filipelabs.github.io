@@ -208,7 +208,6 @@ a:active {
 }
 
 .carousel-img {
-    display: none;
     width: 100%;
     transition: opacity 0.5s ease-in-out; /* Adiciona transição de opacidade */
 
