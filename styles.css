@@ -128,7 +128,7 @@ a:active {
 
 .back-button {
     display: inline-block;
-    margin-top: 20px;
+    margin: 0px auto;
     padding: 10px 15px;
     background-color: #1a1a1a;
     color: white;
