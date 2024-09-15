@@ -26,15 +26,15 @@ const images = document.querySelectorAll('.carousel-img');
 const totalImages = images.length;
 
 document.querySelector('.next').addEventListener('click', function() {
-    images[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % totalImages;
-    images[currentIndex].style.display = 'block';
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % totalImages;
+  images[currentIndex].classList.add('active');
 });
 
 document.querySelector('.prev').addEventListener('click', function() {
-    images[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    images[currentIndex].style.display = 'block';
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+  images[currentIndex].classList.add('active');
 });
 
 // Lightbox para exibir a imagem em tamanho maior
