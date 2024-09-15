@@ -87,8 +87,8 @@ a:active {
 }
 
 .project-card img {
-    width: 300px; /* Largura total do contêiner */
-    height: 200px; /* Altura fixa para as imagens */
+    width: 350px; /* Largura total do contêiner */
+    height: 400px; /* Altura fixa para as imagens */
     object-fit: cover; /* Cobre o contêiner sem distorcer */
 }
 
