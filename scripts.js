@@ -21,23 +21,35 @@ backToTopButton.addEventListener("click", function() {
 });
 
 // Carrossel de imagens
-let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-img');
-images[0].classList.add('active'); // Adiciona a classe active à primeira imagem
-const totalImages = images.length;
+const carousel = document.querySelector('.carousel');
+const carouselImgs = carousel.querySelectorAll('.carousel-img');
+let currentImgIndex = 0;
 
-document.querySelector('.next').addEventListener('click', function() {
-  const currentImage = document.querySelector('.carousel-img.active');
-  currentImage.classList.remove('active');
-  currentIndex = (currentIndex + 1) % totalImages;
-  images[currentIndex].classList.add('active');
+// Inicialize o carrossel com a primeira imagem ativa
+carouselImgs[currentImgIndex].classList.add('active');
+
+// Adicione um event listener para o botão "prev"
+document.querySelector('.prev').addEventListener('click', function() {
+  carouselImgs[currentImgIndex].classList.remove('active');
+  currentImgIndex = (currentImgIndex - 1 + carouselImgs.length) % carouselImgs.length;
+  carouselImgs[currentImgIndex].classList.add('active');
 });
 
-document.querySelector('.prev').addEventListener('click', function() {
-  const currentImage = document.querySelector('.carousel-img.active');
-  currentImage.classList.remove('active');
-  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-  images[currentIndex].classList.add('active');
+// Adicione um event listener para o botão "next"
+const nextBtn = document.querySelector('.next');
+nextBtn.addEventListener('click', function() {
+  carouselImgs[currentImgIndex].classList.remove('active');
+  currentImgIndex = (currentImgIndex + 1) % carouselImgs.length;
+  carouselImgs[currentImgIndex].classList.add('active');
+});
+
+// Adicione um event listener para a tecla direita
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowRight') {
+    carouselImgs[currentImgIndex].classList.remove('active');
+    currentImgIndex = (currentImgIndex + 1) % carouselImgs.length;
+    carouselImgs[currentImgIndex].classList.add('active');
+  }
 });
 
 // Lightbox para exibir a imagem em tamanho maior
@@ -48,10 +60,3 @@ const imagesInCarousel = document.querySelectorAll('.carousel-img');
 imagesInCarousel.forEach(img => {
     img.addEventListener('click', function() {
         lightbox.style.display = 'flex';
-        lightboxImg.src = this.src;
-    });
-});
-
-document.querySelector('.close').addEventListener('click', function() {
-    lightbox.style.display = 'none';
-});
