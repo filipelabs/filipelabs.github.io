@@ -19,3 +19,36 @@ backToTopButton.addEventListener("click", function() {
     document.body.scrollTop = 0; // Para Safari
     document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
 });
+
+// Carrossel de imagens
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-img');
+const totalImages = images.length;
+
+document.querySelector('.next').addEventListener('click', function() {
+    images[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % totalImages;
+    images[currentIndex].style.display = 'block';
+});
+
+document.querySelector('.prev').addEventListener('click', function() {
+    images[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    images[currentIndex].style.display = 'block';
+});
+
+// Lightbox para exibir a imagem em tamanho maior
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const imagesInCarousel = document.querySelectorAll('.carousel-img');
+
+imagesInCarousel.forEach(img => {
+    img.addEventListener('click', function() {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = this.src;
+    });
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+    lightbox.style.display = 'none';
+});
