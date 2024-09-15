@@ -251,6 +251,18 @@ button.next {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .carousel-img {
+        padding: 40px 15px;
+        min-height: 15vh; /* Altura mínima um pouco menor */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-img {
+        padding: 30px 10px;
+        min-height: 15vh; /* Altura mínima ainda menor para dispositivos pequenos */
+    }
 
 footer {
     background-color: #333;
