@@ -130,10 +130,11 @@ a:active {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #1a1a1a;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    justify-content: center;
 }
 
 .back-button:hover {
