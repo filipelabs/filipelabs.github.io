@@ -3,16 +3,32 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ccae9f;
+    background-color: #F2F2F2;
+}
+
+/* Estilo para o modo escuro */
+body.dark-mode {
+  background-color: #333;
+  color: #F2F2F2;
+}
+
+/* Botão para alternar o modo */
+.dark-mode-toggle {
+  cursor: pointer;
+}
+
+.dark-mode-toggle:checked + body {
+  background-color: #333;
+  color: #F2F2F2;
 }
 
 /* Cor do texto principal */
 body, h1, h2, p {
-    color: #201921;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: #007BFF;
     padding: 10px 0;
 }
 
@@ -65,14 +81,14 @@ section {
 
 /* Estilo padrão dos links */
 a {
-    color: #1a1a1a; /* Cor azul mais vibrante */
+    color: #007BFF; /* Cor azul mais vibrante */
     text-: none; /* Remove o sublinhado padrão */
     transition: color 0.3s ease; /* Transição suave ao mudar de cor */
 }
 
 /* Cor dos links ao passar o mouse (hover) */
 a:hover {
-    color: #1a1a1a; /* Cor diferente ao passar o mouse */
+    color: #333; /* Cor diferente ao passar o mouse */
     text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
 }
 
@@ -83,11 +99,11 @@ a:visited {
 
 /* Cor dos links ao serem clicados (active) */
 a:active {
-    color: #1a1a1a; /* Cor vermelha ao clicar no link */
+    color: #0056b3; /* Cor vermelha ao clicar no link */
 }
 
 #projects {
-    background-color: #CCAE9F;
+    background-color: #F2F2F2;
     padding: 50px 20px;
 }
 
