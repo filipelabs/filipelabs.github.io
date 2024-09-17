@@ -69,6 +69,8 @@ main {
   width: 100%; /* Makes the menu span the entire width of the viewport */
   background-color: #fff; /* Optional: Set a background color for the menu */
   z-index: 999; /* Optional: Ensure the menu stays above other elements */
+  text-align: center;
+  margin: 0 auto;
 }
 
 .dark-mode-container {
