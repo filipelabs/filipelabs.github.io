@@ -48,11 +48,9 @@ header {
 }
 
 .capa {
-  background-size: cover;
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  object-fit: cover;
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: auto; /* A altura se ajusta automaticamente para manter as proporções */
+  object-fit: cover; /* A imagem preenche todo o container, possivelmente cortando as bordas */
 }
 
 main {
