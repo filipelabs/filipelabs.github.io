@@ -45,6 +45,16 @@ main {
   margin-top: 300px; /* Espaço para a capa */
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode-container {
+  margin-left: 20px;
+}
+
 nav ul {
     list-style: none;
     text-align: center;
