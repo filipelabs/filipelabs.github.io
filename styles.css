@@ -32,6 +32,19 @@ header {
     padding: 10px 0;
 }
 
+.capa {
+  background-image: url('/assets/capa.webp');
+  background-size: cover;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 320px; /* Tamanho máximo para telas menores */
+  height: auto; /* A altura se ajusta automaticamente de acordo com a largura */
+  object-fit: cover; /* A imagem preenche todo o container, possivelmente cortando as bordas */
+}
+
+main {
+  margin-top: 300px; /* Espaço para a capa */
+}
+
 nav ul {
     list-style: none;
     text-align: center;
@@ -54,10 +67,7 @@ section {
 }
 
 #about {
-   background-image: url("assets/capa.webp");
-    background-repeat: no-repeat;
-    background-size: cover; /* Cobre o contêiner sem distorcer */
-    background-position: center; /* Centraliza a imagem */
+   background-color: #1a1a1a;
     padding: 50px 20px;
     display: block;
 }
