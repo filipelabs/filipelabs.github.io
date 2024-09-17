@@ -208,7 +208,7 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
     display: inline-block;
     margin: 0px auto;
     padding: 10px 15px;
-    background-color: #5c1e1e;
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -216,7 +216,7 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
 }
 
 .back-button:hover {
-    background-color: #0056b3;
+    background-color: #006CE0;
 }
 
 #contato {
