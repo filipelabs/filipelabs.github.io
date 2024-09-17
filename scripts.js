@@ -61,6 +61,23 @@ carouselImgs.forEach(img => {
   });
 });
 
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeIcon = document.querySelector('.dark-mode-icon');
+const lightModeIcon = document.querySelector('.light-mode-icon');
+const body = document.body;
+
+darkModeToggle.addEventListener('change', () => {
+  if (darkModeToggle.checked) {
+    body.classList.add('dark-mode');
+    darkModeIcon.style.display = 'none';
+    lightModeIcon.style.display = 'block';
+  } else {
+    body.classList.remove('dark-mode');
+    darkModeIcon.style.display = 'block';
+    lightModeIcon.style.display = 'none';
+  }
+});
+
 // Event listener para fechar o lightbox
 closeBtn.addEventListener('click', () => {
   lightbox.style.display = 'none';
