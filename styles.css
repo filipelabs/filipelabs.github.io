@@ -48,7 +48,7 @@ header {
 }
 
 .container {
-  max-width: 800px; /* Largura máxima do container */
+  max-width: 1280px; /* Largura máxima do container */
   margin: 0 auto; /* Centraliza o container na página */
 }
 
