@@ -116,6 +116,14 @@ section {
     }
 }
 
+.titulo {
+  text-align: center; /* Centraliza o texto */
+  background-color: #f2f2f2; /* Cor de fundo da div */
+  padding: 20px;
+  border-radius: 10px; /* Arredonda as bordas */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Cria a sombra */
+}
+
 /* Estilo padrão dos links */
 a {
     color: #007BFF; /* Cor azul mais vibrante */
