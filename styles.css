@@ -47,6 +47,11 @@ header {
     padding: 10px 0;
 }
 
+.container {
+  max-width: 800px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o container na página */
+}
+
 .capa {
   width: 100%; /* Ocupa toda a largura disponível */
   height: auto; /* A altura se ajusta automaticamente para manter as proporções */
