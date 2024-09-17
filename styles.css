@@ -14,12 +14,27 @@ body.dark-mode {
 
 /* Botão para alternar o modo */
 .dark-mode-toggle {
-  cursor: pointer;
+  display: none; /* Escondemos o checkbox */
 }
 
 .dark-mode-toggle:checked + body {
   background-color: #333;
   color: #F2F2F2;
+}
+
+icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.dark-mode-icon {
+  display: block;
+}
+
+.light-mode-icon {
+  display: none;
 }
 
 /* Cor do texto principal */
@@ -77,7 +92,7 @@ section {
 }
 
 #about {
-   background-color: #1a1a1a;
+   background-color: #F2F2F2;
     padding: 50px 20px;
     display: block;
 }
