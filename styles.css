@@ -217,6 +217,62 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
     }
 }
 
+/* Estilo para o blog de projetos */
+#blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#blog-post h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Imagem em destaque */
+.project-hero {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.project-hero img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Conteúdo do artigo */
+.project-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.project-content h3 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+/* Galeria de imagens do projeto */
+.project-gallery {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.project-gallery img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
 .back-button {
     display: inline-block;
     margin: 0px auto;
