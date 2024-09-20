@@ -109,6 +109,16 @@ header:after{
     text-decoration:none;
 }
 
+.menu-item { /* New class for menu items */
+  display: inline-block; /* Keep menu items in line */
+  margin: 0 15px; 
+  text-decoration: none;
+  color: #fff;
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
+}
+
 .menu:after{
   content:"";
   display:block;
@@ -166,7 +176,7 @@ header:after{
   border:2px solid #fff;
   border-radius:3px;
   text-decoration:none;
-  display:inline-flex;
+  /* Remove display: inline-flex; */
   align-items:center;
   align-content:center;
   margin:20px;
