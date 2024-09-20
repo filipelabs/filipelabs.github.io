@@ -163,13 +163,12 @@ header {
   align-items:center;
   align-content:center;
   margin:20px;
-  margin-left: 20px; /* Espaçamento opcional para o logo */
   padding:0px 10px;
   font-weight:900;
   font-size:1.1em;
   line-height:1;
   box-sizing:border-box;
-  height:40px
+  height:40px;
 }
 
 .sides, .info{
