@@ -56,7 +56,7 @@ header {
     display: flex;
     justify-content: center; /* Espaça o logo e o menu */
     align-items: center; /* Alinha verticalmente */
-    height: 50vw;
+    height: 100vh;
     min-height: 400px;
     max-height: 550px;
     min-width: 300px;
@@ -81,10 +81,6 @@ header {
   position:absolute;
   top:0;
   left:0;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0); backface-visibility: hidden;
-  scale(1.0, 1.0);
-    transform: translateZ(0);
   background:#f2f2f2 url(/capa.webp) 50% 0 no-repeat;
   background-size:100%;
   background-attachment:fixed;
@@ -173,7 +169,7 @@ header {
   font-size:1.1em;
   line-height:1;
   box-sizing:border-box;
-  height:autopx
+  height:40px
 }
 
 .sides, .info{
