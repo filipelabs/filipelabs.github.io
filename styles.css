@@ -51,12 +51,11 @@ body, h1, h2, p {
 }
 
 .header {
-    position: relative;
     display: flex;
-    justify-content: space-between; /* Deixa o logo e o menu nos lados opostos */
-    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Alinha o logo à esquerda e o menu à direita */
+    align-items: center; /* Alinha verticalmente no centro */
     padding: 20px;
-    color: #eee;
+    background-color: transparent;
 }
 
 
@@ -117,14 +116,13 @@ body, h1, h2, p {
   box-shadow:0 8px, 0 16px
 }
 
+* Estilos do menu (hambúrguer) */
 .menu-btn {
     font-size: 30px;
     color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    display: block;
-    padding: 0;
     margin-right: 20px; /* Alinha à direita */
 }
 
@@ -171,25 +169,17 @@ body, h1, h2, p {
 
 
 .logo{
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  align-content:center;
-  margin:20px;
-  padding:0px 10px;
-  font-weight:900;
-  font-size:1.1em;
-  line-height:1;
-  box-sizing:border-box;
-  height:40px
+  logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .sides {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaçamento entre os itens dentro da div */
+    gap: 15px;
 }
 
 .sides, .info{
