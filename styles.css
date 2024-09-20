@@ -102,6 +102,9 @@ header {
   margin: 0 15px; /* Adiciona espaço entre os links */
   text-decoration: none;
   color: #fff;
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
 }
 
 .menu:after{
