@@ -119,44 +119,6 @@ header:after{
   display: inline-block; /* Keep menu items inline */
 }
 
-
-.menu-item { /* New class for menu items */
-  display: inline-block; /* Keep menu items in line */
-  margin: 0 15px; 
-  text-decoration: none;
-  color: #fff;
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
-}
-
-.menu:after{
-  content:"";
-  display:block;
-  width:20px;
-  height:3px;
-  background:#fff;
-  position:absolute;
-  margin:0 auto;
-  top:5px;
-  left:0;
-  right:0;
-  box-shadow:0 8px, 0 16px
-}
-
-.menu-btn {
-    font-size: 30px;
-    color: white;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: block;
-    margin: 20px;
-    margin-right: 20px; /* Espaçamento opcional para o botão de menu */
-    padding: 0;
-    margin-left: auto; /* Empurra o botão para a direita */
-}
-
 /* Oculta o menu por padrão */
 .menu-list {
     display: none;
