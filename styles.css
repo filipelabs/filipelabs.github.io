@@ -176,7 +176,6 @@ header {
 
 .sides, .info{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 15px; /* Espaçamento entre os itens */
 }
