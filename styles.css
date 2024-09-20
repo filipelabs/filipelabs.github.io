@@ -98,16 +98,27 @@ header:after{
 }
 
 .menu{
-    display: flex; /* Use flexbox for better centering */
-    justify-content: center; /* Space the logo and menu */
-    align-items: center; /* Align vertically */
-    margin: 0 15px; /* Adiciona espaço entre os links */
-    text-decoration: none;
-    color: #fff;
-    border:2px solid #fff;
-    border-radius:3px;
-    text-decoration:none;
+  display: flex; /* Use flexbox for horizontal arrangement */
+  justify-content: center; /* Center the menu items */
+  align-items: center;
+  margin: 0; /* Remove any default margin */
 }
+
+.menu a {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px; /* Add space between menu items */
+  padding: 0px 10px;
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1;
+  box-sizing: border-box;
+  height: 40px;
+  display: inline-block; /* Keep menu items inline */
+}
+
 
 .menu-item { /* New class for menu items */
   display: inline-block; /* Keep menu items in line */
@@ -173,19 +184,19 @@ header:after{
 }
 
 .logo{
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
-  /* Remove display: inline-flex; */
-  align-items:center;
-  align-content:center;
-  margin:20px;
-  padding:0px 10px;
-  font-weight:900;
-  font-size:1.1em;
-  line-height:1;
-  box-sizing:border-box;
-  height:40px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+  padding: 0px 10px;
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1;
+  box-sizing: border-box;
+  height: 40px;
+  display: inline-block; /* Make the logo a block-level element */
 }
 
 .sides, .info{
