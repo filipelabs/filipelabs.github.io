@@ -50,14 +50,17 @@ body, h1, h2, p {
     color: #333;
 }
 
-.header {
-    position: relative;
-    display: flex;
-    justify-content: space-between; /* Deixa o logo e o menu nos lados opostos */
-    align-items: center; /* Alinha verticalmente os itens */
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+header {
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vw;
+    min-height: 400px;
+    max-height: 550px;
+    min-width: 300px;
+    color: #eee;
 }
 
 .header:after{
@@ -117,7 +120,6 @@ body, h1, h2, p {
   box-shadow:0 8px, 0 16px
 }
 
-* Estilos do menu (hambúrguer) */
 .menu-btn {
     font-size: 30px;
     color: white;
@@ -125,78 +127,61 @@ body, h1, h2, p {
     border: none;
     cursor: pointer;
     display: block;
+    margin: 20px;
     padding: 0;
-    margin-right: 20px; /* Alinha à direita */
 }
 
 /* Oculta o menu por padrão */
 .menu-list {
-    display: none; /* Esconde o menu inicialmente */
+    display: none;
     flex-direction: column;
     gap: 10px;
     position: absolute;
     top: 60px; /* Abaixo do botão de menu */
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
     padding: 20px;
     border-radius: 5px;
-    z-index: 100; /* Garante que apareça acima de outros elementos */
 }
 
-/* Estilização dos links do menu */
+/* Links do menu */
 .menu-list a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    display: block; /* Cada link ocupa uma linha */
 }
 
-/* Exibe o menu quando a classe "open" é adicionada */
+/* Menu visível quando ativado */
 .menu-list.open {
-    display: flex; /* Exibe o menu como uma lista flexível */
+    display: flex; /* Exibe o menu quando o botão é clicado */
 }
-
-@media (min-width: 768px) {
-    .menu-list {
-        display: flex !important; /* Exibe o menu normalmente em telas maiores */
-        position: static; /* Remove a posição absoluta */
-        background-color: transparent;
-        flex-direction: row; /* Itens em linha para telas maiores */
-        padding: 0;
-        gap: 20px;
-    }
-
-    .menu-btn {
-        display: none; /* Esconde o botão de menu em telas maiores */
-    }
-}
-
 
 .logo{
-  logo {
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    font-size: 1.5rem;
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  align-content:center;
+  margin:20px;
+  padding:0px 10px;
+  font-weight:900;
+  font-size:1.1em;
+  line-height:1;
+  box-sizing:border-box;
+  height:40px
 }
-
-.sides {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Espaço entre itens dentro da div sides */
-}
-
 .sides, .info{
   flex: 0 0 auto;
   width:50%
 }
-
 .info{
   width:100%;
   padding:15% 10% 0 10%;
   text-align:center;
   text-shadow:0 2px 3px rgba(0,0,0,0.2)
 }
-
 .author{
   display:inline-block;
   width:50px;
@@ -555,12 +540,15 @@ a:active {
 }
 
 .carousel-img {
-     width: 100%;
-    transition: opacity 0.5s ease-in-out; /* Adiciona transição de opacidade */
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-img.active {
   display: block;
+  opacity: 1;
+
 }
 
 .carousel-img.inactive {
