@@ -54,7 +54,7 @@ header {
     position: fixed;
     overflow: hidden;
     display: flex; /* Use flexbox for better centering */
-    justify-content: space-between; /* Space the logo and menu */
+    justify-content: center; /* Space the logo and menu */
     align-items: center; /* Align vertically */
     height: 100vh;
     min-height: 400px;
@@ -98,13 +98,15 @@ header:after{
 }
 
 .menu{
-  display: flex; /* Alterar para inline-block para que os links fiquem lado a lado */
-  margin: 0 15px; /* Adiciona espaço entre os links */
-  text-decoration: none;
-  color: #fff;
-  border:2px solid #fff;
-  border-radius:3px;
-  text-decoration:none;
+    display: flex; /* Use flexbox for better centering */
+    justify-content: center; /* Space the logo and menu */
+    align-items: center; /* Align vertically */
+    margin: 0 15px; /* Adiciona espaço entre os links */
+    text-decoration: none;
+    color: #fff;
+    border:2px solid #fff;
+    border-radius:3px;
+    text-decoration:none;
 }
 
 .menu:after{
