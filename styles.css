@@ -124,35 +124,51 @@ body, h1, h2, p {
     border: none;
     cursor: pointer;
     display: block;
-    margin: 20px;
     padding: 0;
+    margin-right: 20px; /* Alinha à direita */
 }
 
 /* Oculta o menu por padrão */
 .menu-list {
-    display: none;
+    display: none; /* Esconde o menu inicialmente */
     flex-direction: column;
     gap: 10px;
     position: absolute;
     top: 60px; /* Abaixo do botão de menu */
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 5px;
+    z-index: 100; /* Garante que apareça acima de outros elementos */
 }
 
-/* Links do menu */
+/* Estilização dos links do menu */
 .menu-list a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    display: block; /* Cada link ocupa uma linha */
 }
 
-/* Menu visível quando ativado */
+/* Exibe o menu quando a classe "open" é adicionada */
 .menu-list.open {
-    display: flex; /* Exibe o menu quando o botão é clicado */
+    display: flex; /* Exibe o menu como uma lista flexível */
 }
+
+@media (min-width: 768px) {
+    .menu-list {
+        display: flex !important; /* Exibe o menu normalmente em telas maiores */
+        position: static; /* Remove a posição absoluta */
+        background-color: transparent;
+        flex-direction: row; /* Itens em linha para telas maiores */
+        padding: 0;
+        gap: 20px;
+    }
+
+    .menu-btn {
+        display: none; /* Esconde o botão de menu em telas maiores */
+    }
+}
+
 
 .logo{
   border:2px solid #fff;
