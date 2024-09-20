@@ -104,3 +104,12 @@ projectCards.forEach(card => {
         }
     });
 });
+
+// Seleciona o botão e o menu
+const menuBtn = document.getElementById('menu-btn');
+const menuList = document.getElementById('menu-list');
+
+// Alterna a classe 'open' ao clicar no botão
+menuBtn.addEventListener('click', () => {
+  menuList.classList.toggle('open');
+});
