@@ -51,7 +51,7 @@ body, h1, h2, p {
 }
 
 header {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     display: flex;
     justify-content: center; /* Espaça o logo e o menu */
@@ -64,30 +64,6 @@ header {
     padding: 15px;
 }
 
-.header:after{
-  content:"";
-  width:100%;
-  height:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  z-index:-1;
-  background: linear-gradient(to bottom, rgba(26,26,26,1.12) 40%,rgba(26,26,26,1) 100%);
-}
-.header:before{
-  content:"";
-  width:100%;
-  height:200%;
-  position:absolute;
-  top:0;
-  left:0;
-  background:#f2f2f2 url(/capa.webp) 50% 0 no-repeat;
-  background-size:100%;
-  background-attachment:fixed;
-  animation: grow 360s  linear 10ms infinite;
-  transition:all 0.4s ease-in-out;
-  z-index:-2
-}
 .header a{
   color:#eee
 }
