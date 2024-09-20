@@ -54,15 +54,13 @@ header {
     position:relative;
     overflow:hidden;
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    height:50vw;
-    min-height:400px;
-    max-height:550px;
-    min-width:300px;
-    color:#eee;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vw;
+    min-height: 400px;
+    max-height: 550px;
+    min-width: 300px;
+    color: #eee;
 }
 
 .header:after{
@@ -121,6 +119,44 @@ header {
   right:0;
   box-shadow:0 8px, 0 16px
 }
+
+.menu-btn {
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Oculta o menu por padrão */
+.menu-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Abaixo do botão de menu */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Links do menu */
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block; /* Cada link ocupa uma linha */
+}
+
+/* Menu visível quando ativado */
+.menu-list.open {
+    display: flex; /* Exibe o menu quando o botão é clicado */
+}
+
 .logo{
   border:2px solid #fff;
   border-radius:3px;
