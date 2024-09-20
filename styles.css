@@ -173,7 +173,7 @@ header {
   font-size:1.1em;
   line-height:1;
   box-sizing:border-box;
-  height:40px
+  height:autopx
 }
 
 .sides, .info{
