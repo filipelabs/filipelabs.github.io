@@ -54,15 +54,14 @@ header {
     position: relative;
     overflow: hidden;
     display: flex;
-    justify-content: space-between; /* Espaça o logo e o menu */
+    justify-content: center; /* Espaça o logo e o menu */
     align-items: center; /* Alinha verticalmente */
     height: 50vw;
     min-height: 400px;
     max-height: 550px;
     min-width: 300px;
     color: white;
-    padding: 20px;
-
+    padding: 15px;
 }
 
 .header:after{
@@ -73,7 +72,7 @@ header {
   bottom:0;
   left:0;
   z-index:-1;
- background: linear-gradient(to bottom, rgba(26,26,26,1.12) 40%,rgba(26,26,26,1) 100%);
+  background: linear-gradient(to bottom, rgba(26,26,26,1.12) 40%,rgba(26,26,26,1) 100%);
 }
 .header:before{
   content:"";
