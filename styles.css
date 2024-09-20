@@ -132,7 +132,7 @@ section {
 /* Estilo padrão dos links */
 a {
     color: #007BFF; /* Cor azul mais vibrante */
-    text-: none; /* Remove o sublinhado padrão */
+    text-decoration: none;
     transition: color 0.3s ease; /* Transição suave ao mudar de cor */
 }
 
@@ -160,6 +160,8 @@ a:active {
 .project-card img {
     width: 100%; /* Largura total do contêiner */
     max-height: 100%; /* Altura fixa para as imagens */
+    border-radius: 10px;
+    margin-bottom: 15px;
     object-fit: cover; /* Cobre o contêiner sem distorcer */
 }
 
@@ -199,7 +201,7 @@ a:active {
     color: #fff;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
+    background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
     font-size: 18px; /* Aumenta o tamanho da fonte */
     font-family: Arial, sans-serif; /* Utiliza uma fonte sans-serif */
@@ -207,6 +209,15 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
 
 .project-card:hover .project-description {
     opacity: 1;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #666;
 }
 
 @media (max-width: 768px) {
@@ -272,7 +283,17 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
     transform: scale(1.05);
 }
 
+#social-media-projects {
+   padding: 50px 20px;
+    text-align: center;
+}
 
+#social-media-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+    
 .back-button {
     display: inline-block;
     margin: 0px auto;
@@ -344,12 +365,14 @@ background-color: rgba(0, 0, 0, 0.6); /* Reduz a opacidade */
 
 .carousel-img {
     width: 100%;
-    transition: opacity 0.5s ease-in-out; /* Adiciona transição de opacidade */
-
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-img.active {
   display: block;
+  opacity: 1;
+
 }
 
 .carousel-img.inactive {
