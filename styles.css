@@ -128,6 +128,7 @@ header {
     margin: 20px;
     margin-right: 20px; /* Espaçamento opcional para o botão de menu */
     padding: 0;
+    margin-left: auto; /* Empurra o botão para a direita */
 }
 
 /* Oculta o menu por padrão */
@@ -240,14 +241,10 @@ main {
 }
 
 .nav {
-  position: fixed;
-  top: 0; /* Positions the menu at the top of the page */
-  left: 0; /* Positions the menu at the left edge of the page */
-  width: 100%; /* Makes the menu span the entire width of the viewport */
-  background-color: #fff; /* Optional: Set a background color for the menu */
-  z-index: 999; /* Optional: Ensure the menu stays above other elements */
-  text-align: center;
-  margin: 0 auto;
+  display: flex; /* Adiciona flexbox ao menu */
+  justify-content: space-between; /* Espaça os itens */
+  align-items: center; /* Alinha verticalmente */
+  padding: 10px 20px; /* Adiciona um padding */
 }
 
 .dark-mode-container {
@@ -255,21 +252,18 @@ main {
 }
 
 nav ul {
+    display: flex; /* Exibe os itens do menu em linha */
     list-style: none;
-    display: flex;
-    justify-content: center; /* Centraliza os itens */
-    padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
-
+    margin: 0 15px; /* Espaço entre os itens do menu */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
     font-size: 18px;
 }
 
