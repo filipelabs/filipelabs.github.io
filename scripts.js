@@ -35,6 +35,8 @@ let currentImgIndex = 0;
 function showImage(index) {
   carouselImgs.forEach(img => img.style.display = 'none');
   carouselImgs[index].style.display = 'block';
+  carouselImgs[index].classList.add('active'); // Add active class
+  carouselImgs[index].classList.remove('inactive'); // Remove inactive class
 }
 
 // Exibir a primeira imagem por padrão ao carregar a página
