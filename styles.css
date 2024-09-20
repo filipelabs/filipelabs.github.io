@@ -51,13 +51,14 @@ body, h1, h2, p {
 }
 
 .header {
+    position: relative;
     display: flex;
-    justify-content: space-between; /* Alinha o logo à esquerda e o menu à direita */
-    align-items: center; /* Alinha verticalmente no centro */
+    justify-content: space-between; /* Deixa o logo e o menu nos lados opostos */
+    align-items: center; /* Alinha verticalmente os itens */
     padding: 20px;
-    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
 }
-
 
 .header:after{
   content:"";
@@ -123,6 +124,8 @@ body, h1, h2, p {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    display: block;
+    padding: 0;
     margin-right: 20px; /* Alinha à direita */
 }
 
@@ -179,7 +182,7 @@ body, h1, h2, p {
 .sides {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Espaço entre itens dentro da div sides */
 }
 
 .sides, .info{
