@@ -53,9 +53,9 @@ body, h1, h2, p {
 header {
     position: fixed;
     overflow: hidden;
-    display: inline-block;
-    justify-content: center; /* Espaça o logo e o menu */
-    align-items: center; /* Alinha verticalmente */
+    display: flex; /* Use flexbox for better centering */
+    justify-content: space-between; /* Space the logo and menu */
+    align-items: center; /* Align vertically */
     height: 100vh;
     min-height: 400px;
     max-height: 550px;
@@ -98,7 +98,7 @@ header:after{
 }
 
 .menu{
-  display: inline-block; /* Alterar para inline-block para que os links fiquem lado a lado */
+  display: flex; /* Alterar para inline-block para que os links fiquem lado a lado */
   margin: 0 15px; /* Adiciona espaço entre os links */
   text-decoration: none;
   color: #fff;
@@ -625,4 +625,40 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Dark Mode Toggle */
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  background-color: #ddd;
+  border-radius: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #333;
+}
+
+input[type="checkbox"] + label::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+input[type="checkbox"]:checked + label::before {
+  transform: translateX(16px);
 }
