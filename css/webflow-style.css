@@ -3492,7 +3492,7 @@ figcaption {
 }
 
 .section-contact {
-  min-height: 25rem;
+  min-height: 15rem;
   position: relative;
   overflow: hidden;
 }
