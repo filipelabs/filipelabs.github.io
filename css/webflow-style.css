@@ -4049,6 +4049,71 @@ figcaption {
   transform: scale(1.1);
 }
 
+.contact_whatsapp-wrapper {
+  align-items: center;
+  transition: color .2s cubic-bezier(.455, .03, .515, .955);
+  display: flex;
+}
+
+.contact_whatsapp-wrapper:hover {
+  color: var(--text-heading);
+}
+
+.contact_whatsapp-wrapper:focus-visible {
+  outline-color: var(--text-heading);
+  outline-offset: .25rem;
+  border-radius: .25rem;
+  outline-width: .25rem;
+  outline-style: solid;
+}
+
+.contact_whatsapp-wrapper[data-wf-focus-visible] {
+  outline-color: var(--text-heading);
+  outline-offset: .25rem;
+  border-radius: .25rem;
+  outline-width: .25rem;
+  outline-style: solid;
+}
+
+.whatsapp-icon {
+  color: var(--text-heading);
+  margin-bottom: -.375rem;
+  margin-right: .5rem;
+}
+
+.contact_instagram-wrapper {
+  align-items: center;
+  transition: color .2s cubic-bezier(.455, .03, .515, .955);
+  display: flex;
+}
+
+.contact_instagram-wrapper:hover {
+  color: var(--text-heading);
+}
+
+.contact_instagram-wrapper:focus-visible {
+  outline-color: var(--text-heading);
+  outline-offset: .25rem;
+  border-radius: .25rem;
+  outline-width: .25rem;
+  outline-style: solid;
+}
+
+.contact_instagram-wrapper[data-wf-focus-visible] {
+  outline-color: var(--text-heading);
+  outline-offset: .25rem;
+  border-radius: .25rem;
+  outline-width: .25rem;
+  outline-style: solid;
+}
+
+.instagram-icon {
+  color: var(--text-heading);
+  margin-bottom: -.375rem;
+  margin-right: .5rem;
+}
+
+
 .contact_email-wrapper {
   align-items: center;
   transition: color .2s cubic-bezier(.455, .03, .515, .955);
@@ -4093,6 +4158,12 @@ figcaption {
 
 .social-icon {
   font-family: Cartridge, sans-serif;
+  gap: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #0056b3; /* Cor ao passar o mouse sobre o ícone */
 }
 
 .footer-link:focus-visible {
