@@ -4076,7 +4076,7 @@ figcaption {
 }
 
 .whatsapp-icon {
-  color: #white (--text-heading);
+  color: var(--text-heading);
   margin-bottom: -.375rem;
   margin-right: .5rem;
 }
